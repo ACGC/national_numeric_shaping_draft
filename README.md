@@ -6,8 +6,8 @@ Arabic and many other languages (Thai and Bengali) have classical shapes for dig
 National digits have the same semantic meaning as the European digits, and the numbers they form are read from left to right (most significant digit on the left). The difference is only a difference in glyphs.
 
 | European Digits | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-| ------------ |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| **Arabic-Indic Digits** | &#x660; | &#x661; | &#x662; | &#x663; | &#x664; | &#x665; | &#x666; | &#x667; | &#x668; | &#x669; |
+| --------------- |----|---|---|---|---|---|---|---|---|---|
+| **Arabic-Indic Digits** | ٠ |	١ |	٢ |	٣ |	٤ |	٥ |	٦ |	٧ |	٨ |	٩ |
 
 
 From the Arabic user's point of view, Arabic-Indic numerals are the basic numerals used in almost all forms of documents such as most of government documents (IDs, birth certificates, driver's licenses, passports and household bills), bank statements, newspapers, calendars, road signs and menus.
@@ -24,13 +24,15 @@ There are 3 options which should be taken into consideration when implementing n
 When there is no preceding strong characters, the base text direction attribute determines the digit shaping.(Arabic-Indic digits in RTL context and European digits in LTR context).
 
 
-| Pseudo Sample | 123 abc 456 *ARABIC* 789  ||
+**Pseudo Sample**: 123 abc 456 *ARABIC* 789 
+
+**Arabic Sample**: 123 abc 456 أبجد 789
+
+| Option | LTR Context | RTL Context |
 | ------------ |----------|----------|
-| Arabic Sample | 123 abc 456 أبجد 789 ||
-| **Option** | **LTR Context** | **RTL Context** |
-| None | 123 abc 456 أبجد 789  | Same as LTR. |
+| None | 123 abc 456 أبجد 789  | 123 abc 456 أبجد 789 |
 | Contextual | 123 abc 456 أبجد &#x667;&#x668;&#x669; | 123 abc 456 أبجد 789 |
-| National | &#x661;&#x662;&#x663; abc &#x664;&#x665;&#x666; أبجد &#x667;&#x668;&#x669;‬ | ‫&#x661;&#x662;&#x663; abc &#x664;&#x665;&#x666; أبجد &#x667;&#x668;&#x669;‬ |
+| National | ١٢٣ abc 456 789 ‬ |
 
 <br>
 
@@ -70,5 +72,3 @@ As contextual digit shaping is very common and very important for Arabic users, 
 The contextual behavior is implemented by inspecting the preceding character in the buffer and determines the digit shapes based on it. European digits will follow strong Latin character and Arabic-Indic digits will follow strong Arabic character.
 
 When there is no preceding strong character, the base text direction attribute determines the digit shaping, Arabic-Indic digits in RTL context and European digits in LTR context.
-
- 
