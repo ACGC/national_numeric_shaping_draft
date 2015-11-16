@@ -31,9 +31,8 @@ When there is no preceding strong characters, the base text direction attribute 
 | Option | LTR Context | RTL Context |
 | ------------ |----------|----------|
 | None | 123 abc 456 أبجد 789  | 123 abc 456 أبجد 789 |
-| Contextual | 123 abc 456 أبجد &#x667;&#x668;&#x669; | 123 abc 456 أبجد 789 |
-| National | ١٢٣ abc 456 789 ‬ |
-
+| Contextual | 123 abc 456 أبجد ٧٨٩  | أبجد ٧٨٩ abc 456 ١٢٣|
+| National | ١٢٣ abc أبجد ٧٨٩ ٤٥٦ |  أبجد ٧٨٩ abc ١٢٣ ٤٥٦ |
 <br>
 
 **Problem Statement**
