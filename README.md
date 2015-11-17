@@ -46,21 +46,21 @@ Since the mixed English and Arabic data cases are very common in Arabic region, 
 | ![Figure 1](./images/fig1.png) |
 |:--------------------------------:|
 |Figure 1: Sample communication thread using IBM Lotus Notes|
-<br>
 
 |![Figure 2](./images/fig2.png)|
 |:----------------------------:|
 |Figure 2: Sample Arabic and English list of references.|
-<br>
 
-Arabic paragraphs that list references’ names which include numerals are very common for Arabic users as well. In that case the Arabic users expect to see the numerals as European not Arabic-Indic.
+Arabic paragraphs that list references’ names(which include numerals) are very common for Arabic users as well. In that case the Arabic users expect to see the numerals as European not Arabic-Indic.
 
 |![Figure 3](./images/fig3.png)|
 |:----------------------------:|
 |Figure 3: Sample Arabic paragraph where users expect to see European numerals.|
-
-So direct conversion of digits from latin to national will not fulfil Arabic users’ needs. Contextual behavior is the core numeric shaping option that is needed from the Arabic users’ point of view.
-
+<br>
+```
+So direct conversion of digits from latin to national will not fulfil Arabic users’ needs.
+Contextual behavior is the core numeric shaping option that is needed from the Arabic users’ point of view.
+```
 <br> 
 
 ### Proposed Solution
