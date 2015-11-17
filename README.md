@@ -1,5 +1,5 @@
 
-**Introduction to Arabic Numeric Shaping**
+### Introduction to Arabic Numeric Shaping
 
 Arabic and many other languages (Thai and Bengali) have classical shapes for digits “National Digits” that are different from the conventional Western Digits (European).
 
@@ -14,7 +14,7 @@ From the Arabic user's point of view, Arabic-Indic numerals are the basic numera
 
 <br>
 
-**Options for Arabic Numeric Shaping**
+### Options for Arabic Numeric Shaping
 
 There are 3 options which should be taken into consideration when implementing national numeric shaping support in any framework/technology. These options are:
 
@@ -35,7 +35,7 @@ When there is no preceding strong characters, the base text direction attribute 
 | National | ![](./images/04.png) | Same as LTR |
 <br>
 
-**Problem Statement**
+### Problem Statement
 
 Most of the available frameworks/technologies lack the contextual shaping option of national digits. Contextual digit shaping is a very important feature as the Arabic users don’t expect to see Arabic-Indic numerals or European numerals only when they have mixed English and Arabic data. 
 
@@ -63,13 +63,13 @@ So direct conversion of digits from latin to national will not fulfil Arabic use
 
 <br> 
 
-**Proposed Solution**
+### Proposed Solution
 
 As contextual digit shaping is very common and very important for Arabic users, it is highly advised to include this feature in the upcoming release of Ecma402 standard.
 
 <br>
 
-**How does Contextual Option Work**
+### How does Contextual Option Work
 
 The contextual behavior is implemented by inspecting the preceding character in the buffer and determines the digit shapes based on it. European digits will follow strong Latin character and Arabic-Indic digits will follow strong Arabic character.
 
